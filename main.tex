@@ -1,0 +1,63 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{apacite}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{enumerate}
+\usepackage[margin=0.5in]{geometry}
+
+
+\renewcommand{\baselinestretch}{1.0}
+
+\newcommand\nd{\textsuperscript{nd}\xspace}
+\newcommand\rd{\textsuperscript{rd}\xspace}
+\newcommand\nth{\textsuperscript{th}\xspace} %\th is taken already
+
+\setlength\parindent{0pt} % set paragraph indent to zero
+
+% fill up your name, ID and paper title here
+\author{
+Student Name1 \quad Student ID1 \quad contribution1 \\
+Student Name2 \quad Student ID2 \quad contribution2\\
+Student Name3 \quad Student ID3 \quad contribution3\\
+Student Name4 \quad Student ID4 \quad contribution4\\
+}
+\title{ REVIEW REPORT  Title  }
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction and Problem Statement}
+Write the introduction here. What is the background of the problem? Why is there a problem? What are the previous work/research to attempt the problem? 
+
+Problem statement in a new paragraph, follow by objectives.
+
+Citation example: \cite{Termenchy15} and \cite{Jones19}.
+
+\section{Methodology}
+Research methodology is described here. 
+
+\section{Result}
+Result  in a new paragraph.
+
+\section{Discussions}
+Discussion in a new paragraph.
+
+\section{Conclusion}
+Discussions include but not limited to:
+\begin{enumerate}[(a)]
+\item Pros and cons of the method/algorithm used,
+\item limitation of the method/algorithm,
+\item contribution of the research.
+\end{enumerate}
+Conclusion of the work presented in the reviewed research papers.
+
+\section{Future work}
+Some suggestions for improvement.
+
+%References
+\bibliographystyle{apacite}
+\bibliography{MyBib}{}
+
+\end{document}
