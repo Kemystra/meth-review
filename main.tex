@@ -40,8 +40,12 @@ Citation example: \cite{Termenchy15} and \cite{Jones19}.
 \subsection{Holistically Analyzing the Carbon Footprint of AI}
 \hspace{24pt}The work by \textcite{Wu2022} provides a foundational, holistic analysis of the sources of AI's greenhouse gas emissions, shifting the focus beyond prior research that was often limited to the carbon footprint of training a single, massive model. The authors contend that this narrow, model-centric view has become insufficient in the face of the "super-linear growth" of the entire AI ecosystem, a trend characterized by exponential increases in model complexity, vast volumes of training data, and the ever-expanding hardware infrastructure required to support them. To provide a more accurate assessment, their analysis expands the scope to encompass two critical dimensions: the end-to-end machine learning pipeline (from data acquisition to inference) and the full life cycle of the hardware itself. Critically, the authors introduce a practical framework that distinguishes between \textbf{operational carbon}, defined as the emissions from electricity consumed during use, and \textbf{embodied carbon}, which are the often-hidden emissions generated from the entire manufacturing supply chain.
 
-\section{Methodology}
-Research methodology is described here. 
+\section{Research Methodology}
+\subsection{Data Collection and Sourcing}
+Based on the study conducted by Wu et al. (2022), the data was collected from multiple sources, from internal production systems at Meta, external public reports, and experimental modeling to create a holistic view of AI's environmental footprint. The primary data source consisted of extensive internal infrastructure telemetry from Meta's large-scale AI systems, encompassing operational metrics such as data center power consumption logs, GPU utilization rates, model training job durations, and data ingestion bandwidth statistics. To account for the manufacturing footprint, the authors sourced Life Cycle Inventory (LCI) data from external databases and manufacturer publications, such as Apple's Product Environmental Reports, which served as a necessary proxy for their own hardware components. For the purpose of comparative analysis, the study also incorporated the publicly available carbon footprint results of other prominent models, including GPT-3 and Meena, to contextualize their own findings. Finally, to model the energy consumption of specific edge-computing use cases like federated learning, the authors constructed their estimations using a combination of experimental measurements, including device power profiles from Android and network bandwidth data from public sources.
+
+\subsection{Core Methodology and Algorithms} 
+
 
 \section{Result}
 Result  in a new paragraph.
