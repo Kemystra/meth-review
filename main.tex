@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx}
 \usepackage{enumerate}
+\usepackage{amsmath} 
 \usepackage[margin=0.5in]{geometry}
 
 
@@ -28,6 +29,7 @@ Student Name4 \quad Student ID4 \quad contribution4\\
 \begin{document}
 \maketitle
 
+
 \section{Introduction and Problem Statement}
 Write the introduction here. What is the background of the problem? Why is there a problem? What are the previous work/research to attempt the problem? 
 
@@ -35,8 +37,20 @@ Problem statement in a new paragraph, follow by objectives.
 
 Citation example: \cite{Termenchy15} and \cite{Jones19}.
 
-\section{Methodology}
-Research methodology is described here. 
+\section{Literature Review}
+\subsection{Holistically Analyzing the Carbon Footprint of AI}
+\hspace{24pt}The work by Wu et al. (2022) provides a foundational, holistic analysis of the sources of AI's greenhouse gas emissions, shifting the focus beyond prior research that was often limited to the carbon footprint of training a single, massive model. The authors contend that this narrow, model-centric view has become insufficient in the face of the "super-linear growth" of the entire AI ecosystem, a trend characterized by exponential increases in model complexity, vast volumes of training data, and the ever-expanding hardware infrastructure required to support them. To provide a more accurate assessment, their analysis expands the scope to encompass two critical dimensions: the end-to-end machine learning pipeline (from data acquisition to inference) and the full life cycle of the hardware itself. Critically, the authors introduce a practical framework that distinguishes between \textbf{operational carbon}, defined as the emissions from electricity consumed during use, and \textbf{embodied carbon}, which are the often-hidden emissions generated from the entire manufacturing supply chain.
+
+\section{Research Methodology}
+\subsection{Data Collection and Sourcing}
+\hspace{24pt}Based on the study conducted by Wu et al. (2022), the data was collected from multiple sources, from internal production systems at Meta, external public reports, and experimental modeling to create a holistic view of AI's environmental footprint. The primary data source consisted of extensive internal infrastructure telemetry from Meta's large-scale AI systems, encompassing operational metrics such as data center power consumption logs, GPU utilization rates, model training job durations, and data ingestion bandwidth statistics. To account for the manufacturing footprint, the authors sourced Life Cycle Inventory (LCI) data from external databases and manufacturer publications, such as Apple's Product Environmental Reports, which served as a necessary proxy for their own hardware components. For the purpose of comparative analysis, the study also incorporated the publicly available carbon footprint results of other prominent models, including GPT-3 and Meena, to contextualize their own findings. Finally, to model the energy consumption of specific edge-computing use cases like federated learning, the authors constructed their estimations using a combination of experimental measurements, including device power profiles from Android and network bandwidth data from public sources.
+
+\subsection{Core Methodology and Algorithms} 
+\hspace{24pt}Wu et al. (2022) uses a Carbon Footprint Analysis framework that is designed to holistically estimate the carbon footprint of AI, taking into account the complete machine learning (ML) pipeline end-to-end: data collection, model exploration and experimentation, model training, model optimization and run-time inference, while also taking into account the emissions across the life cycle of hardware systems, from manufacturing to operational use. The calculation mechanism is divided into two parts: operational carbon and embodied carbon. Operational carbon is calculated by measuring the total energy consumption, location-based carbon intensity for electricity grids, while using a Power Usage Effectiveness (PUE) factor of 1.1. On the other hand, embodied carbon (carbon footprint of AI hardware) is quantified using LCA (Life Cycle Analysis). GPU-based AI training systems are assumed to have a similar embodied footprint as Apple's 28-core CPU with dual AMD Radeon GPUs in production, while for CPU-only AI training systems are assumed to have half that amount.  Based on the characterization of model training and inference at Meta, an average utilization rate of 30\% to 60\% over the 3-5 year lifetime for servers. Combining all metrics above, the embodied carbon footprint is estimated to be: 
+\begin{equation}
+	CO_2^{\text{embodied}} = \sum_i \frac{\text{Time}}{\text{Lifetime}} CO_2^{\text{embodied}}(AI_{\text{System}})(i)
+\end{equation}
+
 
 \section{Result}
 Result  in a new paragraph.
